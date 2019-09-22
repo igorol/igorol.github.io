@@ -16,18 +16,18 @@ function setup() {
   bigSlider.position(20, 40);
   smallSlider = createSlider(10, 600, 20, 1);
   smallSlider.position(20, 60);
-  frSLider = createSlider(24, 100, 24, 1);
+  frSLider = createSlider(24, 500, 24, 1);
   frSLider.position(20, 80);
 
-  text('Rho - Pen point distance from center = ' + rhoSlider.value(),
+  text('Slider 1 = ' + rhoSlider.value(),
        rhoSlider.x * 2 + rhoSlider.width,
        35);
 
-  text('R - Outside wheel radius = ' + bigSlider.value(),
+  text('Slider 2 = ' + bigSlider.value(),
        bigSlider.x * 2 + bigSlider.width,
        55);
 
-  text('r - Inner wheel radius = ' + smallSlider.value(),
+  text('Slider 3 = ' + smallSlider.value(),
        smallSlider.x * 2 + smallSlider.width,
        75);
 
@@ -41,9 +41,9 @@ function setup() {
   ClearButton.mousePressed(clearLines);
 
   // create save button
-  saveButton = createButton('Save Image');
-  saveButton.position(95, 105);
-  saveButton.mousePressed(saveCanvas(c, 'myCanvas', 'png'));
+  // saveButton = createButton('Save Image');
+  // saveButton.position(95, 105);
+  // saveButton.mousePressed(saveCanvas(c, 'myCanvas', 'png'));
 
 }
 
@@ -91,15 +91,15 @@ function clearLines()
   strokeWeight(1);
   stroke(0);
   textSize(15);
-  text('Rho - Pen point distance from center = ' + rhoSlider.value(),
+  text('Slider 1 = ' + rhoSlider.value(),
        rhoSlider.x * 2 + rhoSlider.width - displayWidth/2,
        35 - displayHeight/2);
 
-  text('R - Outside wheel radius = ' + bigSlider.value(),
+  text('Slider 2 = ' + bigSlider.value(),
        bigSlider.x * 2 + bigSlider.width - displayWidth/2,
        55 - displayHeight/2);
 
-  text('r - Inner wheel radius = ' + smallSlider.value(),
+  text('Slider 3 = ' + smallSlider.value(),
       smallSlider.x * 2 + smallSlider.width - displayWidth/2,
       75 - displayHeight/2);
   text('Speed', frSLider.x * 2 + frSLider.width - displayWidth/2,
